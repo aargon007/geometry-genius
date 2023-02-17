@@ -5,14 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Genius Geometry</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
             -webkit-appearance: none;
             margin: 0;
         }
     </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
 <body class="md:container md:mx-auto">
     <!-- heading area  -->
@@ -32,33 +38,33 @@
             <!-- triangle  -->
             <div id="" class="p-10 border rounded-lg text-center space-y-8 card">
                 <img src="./images/triangle.png" alt="" class="mx-auto w-4/6 h-40">
-                <h1 class="text-[#414141] text-2xl font-bold">Triangle</h1>
+                <h1 class="text-[#414141] text-2xl font-bold" id="triangle">Triangle</h1>
                 <div class="space-y-5">
                     <h2 class="text-lg">Area (A) = <span>0.5</span> &times; b &times; h</h2>
                     <div class="font-semibold space-x-5">
-                        <input type="number" name="" id="" placeholder="b" class="w-20 p-2 bg-[#F1F1F1] rounded-md outline-none"> cm 
-                        <input type="number" name="" id="" placeholder="h" class="w-20 p-2 bg-[#F1F1F1] rounded-md outline-none"> cm
+                        <input type="number" id="triangle-base" placeholder="b" class="w-20 p-2 bg-[#F1F1F1] rounded-md outline-none"> cm 
+                        <input type="number" id="triangle-height" placeholder="h" class="w-20 p-2 bg-[#F1F1F1] rounded-md outline-none"> cm
                     </div>
                 </div>
-                <button class="bg-[#1090D8] text-white w-full py-4 text-xl font-semibold rounded-md">Calculate</button>
+                <button class="bg-[#1090D8] text-white w-full py-4 text-xl font-semibold rounded-md" id="calculate-triangle">Calculate</button>
             </div>
             <!-- rectangle  -->
             <div id="" class="p-10 border rounded-lg text-center space-y-8 card">
                 <img src="./images/rectangle.png" alt="" class="mx-auto w-4/6 h-40">
-                <h1 class="text-[#414141] text-2xl font-bold">Rectangle</h1>
+                <h1 class="text-[#414141] text-2xl font-bold" id="rectangle">Rectangle</h1>
                 <div class="space-y-5">
                     <h2 class="text-lg">Area (A) = w &times; l</h2>
                     <div class="font-semibold space-x-5">
-                        <input type="number" name="" id="" placeholder="w" class="w-20 p-2 bg-[#F1F1F1] rounded-md outline-none"> cm 
-                        <input type="number" name="" id="" placeholder="l" class="w-20 p-2 bg-[#F1F1F1] rounded-md outline-none"> cm
+                        <input type="number" name="" id="rectangle-width" placeholder="w" class="w-20 p-2 bg-[#F1F1F1] rounded-md outline-none"> cm 
+                        <input type="number" name="" id="rectangle-length" placeholder="l" class="w-20 p-2 bg-[#F1F1F1] rounded-md outline-none"> cm
                     </div>
                 </div>
-                <button class="bg-[#1090D8] text-white w-full py-4 text-xl font-semibold rounded-md">Calculate</button>
+                <button class="bg-[#1090D8] text-white w-full py-4 text-xl font-semibold rounded-md" id="calculate-rectangle">Calculate</button>
             </div>
             <!-- parallelogram  -->
             <div id="" class="p-10 border rounded-lg text-center space-y-8 card">
                 <img src="./images/parallelogram.png" alt="" class="mx-auto w-4/6 h-40">
-                <h1 class="text-[#414141] text-2xl font-bold">Parallelogram</h1>
+                <h1 class="text-[#414141] text-2xl font-bold" id="parallelogram">Parallelogram</h1>
                 <div class="space-y-5">
                     <h2 class="text-lg">Area (A) = b &times; h</h2>
                     <div class="font-semibold space-y-5">
@@ -71,14 +77,14 @@
             <!-- area calculation  -->
             <div class="p-6 border rounded-lg order-last md:order-none">
                 <h1 class="underline text-blue-900 txt-xl font-bold text-center">Area Calculation</h1>
-                <ol class="list-decimal p-5">
+                <ol class="list-decimal p-5 space-y-5" id="area-list">
                     
-                </ul>
+                </ol>
             </div>
             <!-- Rhombus  -->
             <div id="" class="p-10 border rounded-lg text-center space-y-8 card">
                 <img src="./images/rhombus.png" alt="" class="mx-auto w-4/6 h-40">
-                <h1 class="text-[#414141] text-2xl font-bold">Rhombus</h1>
+                <h1 class="text-[#414141] text-2xl font-bold" id="rhombus">Rhombus</h1>
                 <div class="space-y-5">
                     <h2 class="text-lg">Area (A) = <span>0.5</span> &times; d<sub>1</sub> &times; d<sub>2</sub> </h2>
                     <div class="font-semibold space-y-5">
@@ -91,7 +97,7 @@
             <!-- Pentagon  -->
             <div id="" class="p-10 border rounded-lg text-center space-y-8 card">
                 <img src="./images/pentagon.png" alt="" class="mx-auto w-4/6 h-40">
-                <h1 class="text-[#414141] text-2xl font-bold">Pentagon</h1>
+                <h1 class="text-[#414141] text-2xl font-bold" id="pentagon">Pentagon</h1>
                 <div class="space-y-5">
                     <h2 class="text-lg">Area (A) = <span>0.5</span> &times; p &times; b</h2>
                     <div class="font-semibold space-y-5">
@@ -103,8 +109,8 @@
             </div>
             <!-- Ellipse  -->
             <div id="" class="p-10 border rounded-lg text-center space-y-8 card">
-                <img src="./images/ellipse.png" alt="" class="mx-auto w-4/6 h-40">
-                <h1 class="text-[#414141] text-2xl font-bold">Ellipse</h1>
+                <img src="./images/ellipse.png" alt="" class="mx-auto h-40">
+                <h1 class="text-[#414141] text-2xl font-bold" id="ellipse">Ellipse</h1>
                 <div class="space-y-5">
                     <h2 class="text-lg">Area (A) = &pi;ab</h2>
                     <div class="font-semibold space-y-5">
@@ -116,5 +122,7 @@
             </div>
         </div>
     </div>
+    <script src="./js/common.js"></script>
+    <script src="./js/calculation.js"></script>
 </body>
 </html>
