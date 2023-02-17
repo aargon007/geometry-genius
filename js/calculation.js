@@ -9,3 +9,14 @@ document.getElementById("calculate-triangle").addEventListener("click", function
     //return result to area calculation field
     returnAreaResultElement(triangle, area)
 })
+//rectangle
+document.getElementById("calculate-rectangle").addEventListener("click", function(){
+    const rectangle = getGeometryName("rectangle");
+    //get area value
+    const w = getInputValueById("rectangle-width");
+    const l = getInputValueById("rectangle-length");
+    //calculate
+    const area = w * l;
+    //return result to area calculation field
+    returnAreaResultElement(rectangle, area)
+})
