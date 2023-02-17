@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genius Geometry</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+<body class="md:container md:mx-auto">
+    <!-- heading area  -->
+    <div class="bg-blue-100 py-3 px-10 flex justify-between rounded-md mt-5 items-center">
+        <div class="space-y-2">
+            <h1 class="text-3xl font-semibold">Interactive</h1>
+            <p class="text-slate-500 text-xl">Geometry Genius</p>
+        </div>
+        <div>
+            <button class="bg-blue-500 text-white rounded-md px-6 py-2">Blog</button>
+        </div>
+    </div>
+    <!-- geometry area  -->
+    <div class="mt-5">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <!-- card section  -->
+            <div id="" class="p-10 border rounded-lg text-center space-y-8 card">
+                <img src="./images/triangle.png" alt="" class="mx-auto ">
+                <h1 class="text-[#414141] text-2xl font-bold">Triangle</h1>
+                <div class="space-y-5">
+                    <h2 class="text-lg">Area (A) = <span>0.5</span> &times; b &times; h</h2>
+                    <div class="font-semibold space-x-5">
+                        <input type="number" name="" id="" placeholder="b" class="w-28 p-2 bg-[#F1F1F1] rounded-md outline-none"> cm 
+                        <input type="number" name="" id="" placeholder="h" class="w-28 p-2 bg-[#F1F1F1] rounded-md outline-none"> cm
+                    </div>
+                </div>
+                <button class="bg-[#1090D8] text-white w-full py-4 text-xl font-semibold rounded-md">Calculate</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
