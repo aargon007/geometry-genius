@@ -19,7 +19,7 @@ function getInputValueById(id){
         return false
     }
     //if value is valid then return the value
-    const inputValue = parseInt(inputStringValue);
+    const inputValue = parseFloat(inputStringValue);
     return inputValue;
 }
 
@@ -36,10 +36,10 @@ function returnAreaResultElement(name, area){
     const areaList = document.getElementById("area-list");
     const li = document.createElement("li");
     li.innerHTML = `
-        <div class="flex gap-3 items-center">
+        <div class="flex gap-3 place-items-center">
             <h1> ${name} </h1>
             <h1> ${area}cm<sup>2</sup> </h1>
-            <button class="bg-blue-500 text-white p-2 rounded-md">Convert to m <sup>2</sup> </button>
+            <button class="bg-blue-500 text-white py-2 p-1 rounded-md">Convert to m <sup>2</sup> </button>
         </div>
     `;
     areaList.appendChild(li);

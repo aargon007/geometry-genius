@@ -1,3 +1,7 @@
+//blog event directing
+document.getElementById("blog").addEventListener("click", function(){
+    document.location.href = "../pages/blog.html";
+})
 //triangle
 document.getElementById("calculate-triangle").addEventListener("click", function(){
     const triangle = getGeometryName("triangle");
@@ -5,8 +9,8 @@ document.getElementById("calculate-triangle").addEventListener("click", function
     const b = getInputValueById("triangle-base");
     const h = getInputValueById("triangle-height");
     //calculate
-    if(b === true && h === true){
-        const area = 0.5 * b * h;
+    if(b > 0 || h > 0){
+        const area = (0.5 * b * h).toFixed(2);
         //return result to area calculation field
         returnAreaResultElement(triangle, area);
     }
@@ -18,8 +22,8 @@ document.getElementById("calculate-rectangle").addEventListener("click", functio
     const w = getInputValueById("rectangle-width");
     const l = getInputValueById("rectangle-length");
     //calculate
-    if( w === true && l === true){
-        const area = w * l;
+    if( w > 0 && l > 0){
+        const area = (w * l).toFixed(2);
         //return result to area calculation field
         returnAreaResultElement(rectangle, area);
     }
