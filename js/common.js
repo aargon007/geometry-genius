@@ -9,6 +9,16 @@ function getGeometryName(id){
 function getInputValueById(id){
     const element = document.getElementById(id);
     const inputStringValue = element.value;
+    // validation
+    if(inputStringValue === ""){
+        alert(id + " " + "can not be empty");
+        return false;
+    }
+    if(inputStringValue <= 0){
+        alert("Please provide a valid" +" " + id);
+        return false
+    }
+    //if value is valid then return the value
     const inputValue = parseInt(inputStringValue);
     return inputValue;
 }

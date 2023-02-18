@@ -5,9 +5,11 @@ document.getElementById("calculate-triangle").addEventListener("click", function
     const b = getInputValueById("triangle-base");
     const h = getInputValueById("triangle-height");
     //calculate
-    const area = 0.5 * b * h;
-    //return result to area calculation field
-    returnAreaResultElement(triangle, area)
+    if(b === true && h === true){
+        const area = 0.5 * b * h;
+        //return result to area calculation field
+        returnAreaResultElement(triangle, area);
+    }
 })
 //rectangle
 document.getElementById("calculate-rectangle").addEventListener("click", function(){
@@ -16,9 +18,11 @@ document.getElementById("calculate-rectangle").addEventListener("click", functio
     const w = getInputValueById("rectangle-width");
     const l = getInputValueById("rectangle-length");
     //calculate
-    const area = w * l;
-    //return result to area calculation field
-    returnAreaResultElement(rectangle, area)
+    if( w === true && l === true){
+        const area = w * l;
+        //return result to area calculation field
+        returnAreaResultElement(rectangle, area);
+    }
 })
 //parallelogram
 document.getElementById("parallelogram-calculate").addEventListener("click", function(){
