@@ -53,7 +53,7 @@ document.getElementById("pentagon-calculate").addEventListener("click", function
     //return result to area collection field
     returnAreaResultElement(pentagon, area);
 })
-//parallelogram
+//ellipse
 document.getElementById("ellipse-calculate").addEventListener("click", function(){
     const ellipse = getGeometryName("ellipse");
     //get area value
@@ -65,3 +65,14 @@ document.getElementById("ellipse-calculate").addEventListener("click", function(
     //return result to area collection field
     returnAreaResultElement(ellipse, areaFinal);
 })
+//style random bg color when on mouse over for each card 
+const cards = document.getElementsByClassName("card");
+for(const card of cards){
+    card.addEventListener("mouseover", function(){
+        const randomColor = Math.floor(Math.random()*16777215).toString(16);
+        card.style.backgroundColor = "#" + randomColor;
+    })
+    card.addEventListener("mouseout", function(){
+        card.style.backgroundColor = "";
+    })
+}
