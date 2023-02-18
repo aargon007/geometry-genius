@@ -37,9 +37,9 @@ function returnAreaResultElement(name, area){
     const li = document.createElement("li");
     li.innerHTML = `
         <div class="flex gap-3 place-items-center">
-            <h1> ${name} </h1>
-            <h1> ${area}cm<sup>2</sup> </h1>
-            <button class="bg-blue-500 text-white py-2 p-1 rounded-md">Convert to m <sup>2</sup> </button>
+            <h1>${name}</h1>
+            <h1><span class="mtr">${area}</span>cm<sup>2</sup> </h1>
+            <button class="bg-blue-500 text-white py-2 p-1 rounded-md mitres">Convert to m<sup>2</sup> </button>
         </div>
     `;
     areaList.appendChild(li);
